@@ -1,31 +1,26 @@
-import './App.css';
-import Main from './components/Main';
-import Navigation from './components/Navigation/Navigation';
-import Footer from './components/Footer';
-import ShowPlayer from './components/PlayersPresentation/showPlayer';
-import Detail from './components/Detail/Detail';
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
+import "./App.css";
+
+import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer";
+import Player from "./components/Player/Player";
+import Detail from "./components/Detail/Detail";
+import { Routes, Route } from "react-router-dom";
 
 //import Player from './components/Player';
-function App(){
-  return(
-    <div className='App'>
-      <Navigation/>
+function App() {
+  return (
+    <div className="App">
+      <Navigation />
       <Routes>
-          <Route path='/' element={<ShowPlayer/>}> 
-      </Route>
-        <Route path='/detail/:id' element={<Detail/>}></Route>
-  
+        <Route path="/" element={<Player />}></Route>
+        <Route path="/detail/:id" element={<Detail />}></Route>
       </Routes>
-  
-      <Footer/>
-      </div>
+      <Footer />
+    </div>
   );
 }
 export default App;
+
 // function App() {
 //   return (
 //     <div className="App">
